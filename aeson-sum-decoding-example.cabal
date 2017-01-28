@@ -1,0 +1,35 @@
+name:                aeson-sum-decoding-example
+version:             0.1.0.0
+synopsis:            Example for decoding sum types with external discriminator
+description:         Please see README.md
+homepage:            https://github.com/UlfS/aeson-sum-decoding-example#readme
+license:             MIT
+license-file:        LICENSE
+author:              Ulf Sauer
+maintainer:          ulf.sauer@gmail.com
+copyright:           2017 Ulf Sauer
+category:            Development
+build-type:          Simple
+extra-source-files:  README.md
+cabal-version:       >=1.10
+
+library
+  hs-source-dirs:      src
+  exposed-modules:     Lib
+  build-depends:       base >= 4.7 && < 5
+                     , bytestring
+                     , text
+                     , aeson
+  default-language:    Haskell2010
+
+executable aeson-sum-decoding-example-exe
+  hs-source-dirs:      app
+  main-is:             Main.hs
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base
+                     , aeson-sum-decoding-example
+  default-language:    Haskell2010
+
+source-repository head
+  type:     git
+  location: https://github.com/UlfS/aeson-sum-decoding-example
